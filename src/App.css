@@ -58,3 +58,79 @@
   padding-right: 15px;
 }
 
+.main--background{
+  height: 500px;
+  position: relative;
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.main--background > img{
+  width: 100%;
+  z-index: -5;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.main--background > div{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.main--left{
+  left: 20px;
+  position: inherit;
+}
+
+.main--right{
+  right: 20px;
+  position: inherit;
+}
+
+
+.main--text{
+  position: relative;
+  color: white;
+  font-family: 'Bricolage Grotesque';
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main--text > h1{
+  font-weight: 600;
+  font-size: 80px;
+  margin-block-start: 0px;
+  margin-block-end: 10px;
+  text-shadow: 0px 1px 1px rgba(149, 157, 165, 0.2);
+}
+
+.main--text > h4{
+  font-weight: 200;
+  margin-block-start: 0px;
+  font-size: 40px;
+  font-style: italic;
+  text-shadow: 0px 1px 1px rgba(149, 157, 165, 0.2);
+}
+
+.main--button{
+  position: relative;
+  background-color: black;
+  width: 50px;
+  height: 50px;
+  border: none;
+  border-radius: 15px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.main--button > svg{
+  color: white;
+  width: 30px;
+}
