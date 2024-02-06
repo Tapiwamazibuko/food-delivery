@@ -6,6 +6,8 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from 'react-responsive-carousel';
 import CardCarousel from './components/CardCarousel';
 import weeklySpecialData from './data/weeklySpecialData';
+import cookingTimeData from './data/cookingTimeData';
+import InfoCard from './components/InfoCard';
 
 function App() {
   const mainSliderData = mainData.map( data => {
@@ -15,6 +17,14 @@ function App() {
               text={data.text}
               img={data.img}
             />
+  })
+
+  const infoCards = cookingTimeData.map( data => {
+    return <InfoCard 
+              icon={data.icon}
+              title={data.title}
+              description={data.description}
+          />
   })
 
   return (
@@ -29,6 +39,7 @@ function App() {
         secondTitle={weeklySpecialData.secondTitle}
         description={weeklySpecialData.description}
       />
+      {infoCards}
     </div>
   );
 }

@@ -158,7 +158,7 @@
 }
 
 .recipe--title{
-  font-family: 'Bricolage Grotesque';
+  font-family: 'Bricolage Grotesque'; 
   font-size: 21px;
 }
 
@@ -300,4 +300,38 @@
   display: flex;
   flex-direction: row;
   padding-left: 40px;
+}
+
+.info--card--container{
+  height: 150px;
+  width: 250px;
+  margin-left: 20px;
+  margin-right: 20px;
+  border-radius: 20px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+}
+
+.info--card--icon > svg{
+  height: 30px;
+}
+
+.info--card--title > h2{
+  font-family: "Rethink Sans";
+  margin-block-start: 0px;
+  margin-block-end: 0px;
+  font-size: 20px;
+}
+
+.info--card--description > h4{
+  font-family: "Rethink Sans";
+  color: gray;
+  font-weight: 100;
+  font-size: 12px;
+  font-style: italic;
+  margin-block-start: 5px;
 }
