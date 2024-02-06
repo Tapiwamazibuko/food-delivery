@@ -231,7 +231,8 @@
 
 .card--carousel--container{
   background-color: #DADADA;
-  padding-bottom: 20px;
+  padding-bottom: 80px;
+  padding-top: 20px;
 }
 
 
@@ -299,12 +300,14 @@
 .carousel--cards{
   display: flex;
   flex-direction: row;
+  align-items: center;
+  justify-content: center;
   padding-left: 40px;
 }
 
 .info--card--container{
   height: 150px;
-  width: 250px;
+  width: 300px;
   margin-left: 20px;
   margin-right: 20px;
   border-radius: 20px;
