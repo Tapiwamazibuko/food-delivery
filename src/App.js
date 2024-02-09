@@ -26,16 +26,22 @@ function App() {
       {mainSliderData}
       </Carousel> 
       <CardCarousel 
-        icon={weeklySpecialData.icon}
-        firstTitle={weeklySpecialData.firstTitle}
-        secondTitle={weeklySpecialData.secondTitle}
-        description={weeklySpecialData.description}
+        icon={weeklySpecialData[0].icon}
+        firstTitle={weeklySpecialData[0].firstTitle}
+        secondTitle={weeklySpecialData[0].secondTitle}
+        description={weeklySpecialData[0].description}
       />
       <InfoCarousel 
         icon={browseByCookingTimeData.icon}
         firstTitle={browseByCookingTimeData.firstTitle}
         secondTitle={browseByCookingTimeData.secondTitle}
         description={browseByCookingTimeData.description}
+      />
+      <CardCarousel 
+        icon={weeklySpecialData[1].icon}
+        firstTitle={weeklySpecialData[1].firstTitle}
+        secondTitle={weeklySpecialData[1].secondTitle}
+        description={weeklySpecialData[1].description}
       />
     </div>
   );

@@ -4,6 +4,7 @@ export default function RecipeCard(props){
     return (
         <div className="recipe--card--container">
             <button type="button" className="logo--button">M</button>
+            {props.sale && <div className="sale--flag">10% OFF</div>}
             <div className="recipe--image--container">
                 <img src={require(`../images/${props.img}`)}></img>
             </div>
