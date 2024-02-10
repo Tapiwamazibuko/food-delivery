@@ -355,3 +355,66 @@
   font-style: italic;
   margin-block-start: 5px;
 }
+
+.form--container{
+  background-color: #C90D12;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 50px;
+}
+
+.form--text > h5{
+  margin-block-start: 0px;
+  font-family: "Rethink Sans";
+}
+
+.form--title > h2{
+  color: white;
+  font-family: 'Bricolage Grotesque';
+  font-size: 45px;
+  font-weight: 100;
+  margin-block-start: 0px;
+}
+
+.form > span{
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 650px;
+  height: 60px;
+  border-radius: 20px;
+  position: relative;
+}
+
+.form > span > svg{
+  padding-left: 20px;
+  height: 20px;
+}
+
+.form > span > input{
+  margin-left: 20px;
+  width: 400px;
+  text-indent: 5px;
+  border: none;
+  font-family: "Rethink Sans";
+}
+
+.form > span > input:active{
+  border: none;
+}
+
+.form > span > button{
+  background-color: black;
+  border: none;
+  width: 100px;
+  height: 40px;
+  right: 10px;
+  border-radius: 10px;
+  color: white;
+  position: absolute;
+  font-family: "Rethink Sans";
+}

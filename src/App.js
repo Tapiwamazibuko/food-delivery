@@ -12,6 +12,7 @@ import cookingTimeData from './data/cookingTimeData';
 import cuisineData from './data/cuisineData';
 import seafoodData from './data/seafoodData';
 import cookingData from './data/cookingData';
+import SubscribeForm from './components/SubscribeForm';
 
 function App() {
   const mainSliderData = mainData.map( data => {
@@ -64,6 +65,7 @@ function App() {
         description={weeklySpecialData[2].description}
         data={cookingData}
       />
+      <SubscribeForm/>
     </div>
   );
 }
