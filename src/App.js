@@ -8,6 +8,10 @@ import CardCarousel from './components/CardCarousel';
 import weeklySpecialData from './data/weeklySpecialData';
 import browseByCookingTimeData from './data/browseByCookingTimeData';
 import InfoCarousel from './components/InfoCarousel';
+import cookingTimeData from './data/cookingTimeData';
+import cuisineData from './data/cuisineData';
+import seafoodData from './data/seafoodData';
+import cookingData from './data/cookingData';
 
 function App() {
   const mainSliderData = mainData.map( data => {
@@ -30,18 +34,35 @@ function App() {
         firstTitle={weeklySpecialData[0].firstTitle}
         secondTitle={weeklySpecialData[0].secondTitle}
         description={weeklySpecialData[0].description}
+        data={seafoodData}
       />
       <InfoCarousel 
-        icon={browseByCookingTimeData.icon}
-        firstTitle={browseByCookingTimeData.firstTitle}
-        secondTitle={browseByCookingTimeData.secondTitle}
-        description={browseByCookingTimeData.description}
+        icon={browseByCookingTimeData[0].icon}
+        firstTitle={browseByCookingTimeData[0].firstTitle}
+        secondTitle={browseByCookingTimeData[0].secondTitle}
+        description={browseByCookingTimeData[0].description}
+        data={cookingTimeData}
       />
       <CardCarousel 
         icon={weeklySpecialData[1].icon}
         firstTitle={weeklySpecialData[1].firstTitle}
         secondTitle={weeklySpecialData[1].secondTitle}
         description={weeklySpecialData[1].description}
+        data={seafoodData}
+      />
+      <InfoCarousel 
+        icon={browseByCookingTimeData[1].icon}
+        firstTitle={browseByCookingTimeData[1].firstTitle}
+        secondTitle={browseByCookingTimeData[1].secondTitle}
+        description={browseByCookingTimeData[1].description}
+        data={cuisineData}
+      />
+      <CardCarousel 
+        icon={weeklySpecialData[2].icon}
+        firstTitle={weeklySpecialData[2].firstTitle}
+        secondTitle={weeklySpecialData[2].secondTitle}
+        description={weeklySpecialData[2].description}
+        data={cookingData}
       />
     </div>
   );

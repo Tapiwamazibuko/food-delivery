@@ -4,7 +4,7 @@ import InfoCard from "./InfoCard"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function InfoCarousel(props){
-    const infoCards = cookingTimeData.map( data => {
+    const infoCards = props.data.map( data => {
         return <InfoCard 
                   icon={data.icon}
                   title={data.title}

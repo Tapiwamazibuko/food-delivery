@@ -1,12 +1,10 @@
 import React from "react";
-import "react-responsive-carousel/lib/styles/carousel.min.css";
-import { Carousel } from "react-responsive-carousel";
 import RecipeCard from './RecipeCard';
 import seafoodData from '../data/seafoodData';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function CardCarousel(props){
-    const weeklySpecialsData = seafoodData.map( data => {
+    const weeklySpecialsData = props.data.map( data => {
         return <RecipeCard
                   key={data.id}
                   title={data.title}
