@@ -7,6 +7,11 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 
 export default function Header(){
+    function openSeafoodNav() {
+        document.getElementById("seafoodMenu").style.height === "450px" ? document.getElementById("seafoodMenu").style.display = "none" : document.getElementById("seafoodMenu").style.display = "grid";
+        document.getElementById("seafoodMenu").style.height = document.getElementById("seafoodMenu").style.height === "450px" ? "0px" : "450px" ;
+      }
+
     return (
     <nav className="nav--container">
         <div className="nav--left">
@@ -16,7 +21,7 @@ export default function Header(){
         <div className="nav--center">
             <div>
                 <h3>Seafood</h3>
-                <FontAwesomeIcon icon={faChevronDown} />
+                <FontAwesomeIcon icon={faChevronDown} onClick={openSeafoodNav}/>
             </div>
             <div>
                 <h3>Meat</h3>

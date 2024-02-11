@@ -14,6 +14,8 @@ import seafoodData from './data/seafoodData';
 import cookingData from './data/cookingData';
 import SubscribeForm from './components/SubscribeForm';
 import Footer from './components/Footer';
+import Menu from './components/Menu';
+import seafoodMenuData from './data/seafoodMenuData';
 
 function App() {
   const mainSliderData = mainData.map( data => {
@@ -28,6 +30,10 @@ function App() {
   return (
     <div>
       <Header></Header>
+      <Menu 
+        id="seafoodMenu"
+        data={seafoodMenuData}
+      />
       <Carousel> 
       {mainSliderData}
       </Carousel> 

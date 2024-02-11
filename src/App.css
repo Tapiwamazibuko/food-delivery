@@ -56,6 +56,7 @@
 
 .nav--center > div > svg{
   padding-right: 15px;
+  cursor: pointer;
 }
 
 .main--background{
@@ -478,4 +479,36 @@
   font-size: 45px;
   font-weight: 500;
   margin-block-start: 0px;
+}
+
+.menu--container{
+  display: none;
+  grid-template-columns: auto auto auto auto;
+  position: fixed;
+  z-index: 1;
+  background-color: white;
+  width: 100%;
+  height: 0px;
+  padding: 10px;
+}
+
+.menu--item{
+  padding-left: 40px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: left;
+}
+
+.menu--item > h3{
+  margin-block-end: 0px;
+  margin-block-start: 0px;
+  font-family: "Rethink Sans";
+  padding-left: 20px;
+  font-weight: 300;
+  font-size: 16px;
+}
+
+.menu--item > svg{
+  height: 30px;
 }
