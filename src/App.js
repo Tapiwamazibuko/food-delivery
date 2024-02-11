@@ -13,6 +13,7 @@ import cuisineData from './data/cuisineData';
 import seafoodData from './data/seafoodData';
 import cookingData from './data/cookingData';
 import SubscribeForm from './components/SubscribeForm';
+import Footer from './components/Footer';
 
 function App() {
   const mainSliderData = mainData.map( data => {
@@ -66,6 +67,7 @@ function App() {
         data={cookingData}
       />
       <SubscribeForm/>
+      <Footer/>
     </div>
   );
 }
