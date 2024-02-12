@@ -43,6 +43,7 @@ function App() {
         secondTitle={weeklySpecialData[0].secondTitle}
         description={weeklySpecialData[0].description}
         data={seafoodData}
+        type="product"
       />
       <InfoCarousel 
         icon={browseByCookingTimeData[0].icon}
@@ -57,6 +58,7 @@ function App() {
         secondTitle={weeklySpecialData[1].secondTitle}
         description={weeklySpecialData[1].description}
         data={seafoodData}
+        type="recipe"
       />
       <InfoCarousel 
         icon={browseByCookingTimeData[1].icon}
@@ -71,6 +73,7 @@ function App() {
         secondTitle={weeklySpecialData[2].secondTitle}
         description={weeklySpecialData[2].description}
         data={cookingData}
+        type="product"
       />
       <SubscribeForm/>
       <Footer/>
