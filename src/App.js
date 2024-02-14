@@ -33,6 +33,7 @@ function App() {
       <Menu 
         id="seafoodMenu"
         data={seafoodMenuData}
+        key={seafoodMenuData.id}
       />
       <Carousel> 
       {mainSliderData}
