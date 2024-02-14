@@ -5,9 +5,10 @@ export default [
         img: "crumbled-calamari.jpg",
         measurement: "pack",
         description: "Calamari come up 12 a serve and ready to grill", 
-        price: "14.90",
+        price: 14.90,
         shipping: "International",
-        sale: false
+        sale: false,
+        serving: "2 - 3 people"
     },
     {
         id: 2,
@@ -17,7 +18,8 @@ export default [
         description: "Each serve contains 4 pieces", 
         price: "29.00",
         shipping: "International",
-        sale: false
+        sale: false,
+        serving: "3 - 4 people"
     },
     {
         id: 3,
@@ -27,7 +29,8 @@ export default [
         description: "Recommended for 1 person", 
         price: "39.00",
         shipping: "Australia",
-        sale: false
+        sale: false,
+        serving: "2 - 3 people"
     },
     {
         id: 4,
@@ -37,7 +40,8 @@ export default [
         description: "Prawns covered in panko crumbs", 
         price: "19.90",
         shipping: "International",
-        sale: true
+        sale: true,
+        serving: "4 - 5 people"
     },
     {
         id: 5,
@@ -47,6 +51,7 @@ export default [
         description: "A full Lobster covered in a garlic butter sauce", 
         price: "29.90",
         shipping: "International",
-        sale: true
+        sale: true,
+        serving: "2 - 3 people"
     },
 ]

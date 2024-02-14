@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 export default function Menu(props){
     const dataElements = props.data.map(data => {
         return <div className="menu--item">
-              <FontAwesomeIcon  icon={data.icon}/> 
+              <FontAwesomeIcon  icon={data.icon} style={{color: "gray"}}/> 
               <h3>{data.title}</h3>
         </div>
     })

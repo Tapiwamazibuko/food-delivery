@@ -544,3 +544,174 @@
   font-size: 13px;
 }
 
+.product--background{
+  background-color: #DADADA;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-top: 20px;
+}
+
+.product--image{
+  padding: 10px;
+  width: 55%;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.product--image > img{
+  width: 90%;
+  border-radius: 20px;
+}
+
+.product--title{
+  font-family: 'Bricolage Grotesque';
+  width: 100%;
+}
+
+.product--title > h1{
+  margin-block-end: 0px;
+  font-size: 40px;
+  font-weight: 400;
+}
+
+.product--info{
+  width: 45%;
+}
+
+.product--dropdown{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #F5F5F5;
+  border-radius: 20px;
+  height: 70px;
+  width: 80%;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.product--dropdown > h1{
+  font-family: 'Bricolage Grotesque';
+  left: 20px;
+  position: relative;
+  font-size: 25px;
+  font-weight: 600;
+
+}
+
+.product--dropdown > svg{
+  right: 20px;
+  position: absolute;
+}
+
+.quantity--title{
+  font-family: "Rethink Sans";
+  letter-spacing: 2px;
+  color: gray;
+}
+
+.product--quantity{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.quantity--button{
+  background-color: #F5F5F5;
+  height: 40px;
+  width: 40px;
+  border-radius: 15px;
+  border: none;
+  font-family: "Rethink Sans";
+  font-size: 30px;
+  margin-right: 10px;
+}
+
+.quantity--button > h4{
+  margin-block-start: 0;
+  font-weight: 100;
+}
+
+.product--extras{
+  width: 120px;
+  height: 120px;
+  border-radius: 20px;
+  background-color: white;
+  margin-left: 15px;
+  position: relative;
+}
+
+.product--extras > input{
+  right: 5%;
+  position: absolute;
+  margin: 8%;
+  height: 22px;
+  accent-color: #C90D12;
+}
+
+.product--extras > svg{
+  margin-left: 8%;
+  margin-top: 30%;
+}
+
+.product--extras > h4{
+  font-family: "Rethink Sans";
+  font-size: 14px;
+  color: gray;
+  font-weight: 100;
+  margin: 10px;
+}
+
+.maximize--button{
+  right: 8%;
+  bottom: 14%;
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 10px;
+}
+
+.maximize--button > svg{
+   height: 20px;
+}
+
+.quantity--container{
+  height: 50px;
+  width: 70px;
+  border: black;
+  background-color: #F5F5F5;
+  margin-right: 10px;
+  text-align: center;
+  border-radius: 10px;
+  justify-content: center;
+  font-family: "Rethink Sans";
+  font-size: 20px;
+  border-width: 1px;
+  display: flex;
+}
+
+.quantity--container > h3{
+  margin-block-start: 8px;
+  font-weight: 200;
+}
+
+.add--to--cart{
+  margin: 20px;
+  background-color: black;
+  color: white;
+  width: 130px;
+  height: 50px;
+  border: none;
+  border-radius: 20px;
+  font-family: "Rethink Sans";
+  font-weight: 100;
+}
+
+.add--to--cart > svg{
+  margin-left: 10px;
+}
+

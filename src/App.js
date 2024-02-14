@@ -43,7 +43,7 @@ function App() {
         secondTitle={weeklySpecialData[0].secondTitle}
         description={weeklySpecialData[0].description}
         data={seafoodData}
-        type="product"
+        type="recipe"
       />
       <InfoCarousel 
         icon={browseByCookingTimeData[0].icon}
