@@ -16,7 +16,7 @@ export default [
         img: "stuffed-calamari.jpg",
         measurement: "serve",
         description: "Each serve contains 4 pieces", 
-        price: "29.00",
+        price: 29.00,
         shipping: "International",
         sale: false,
         serving: "3 - 4 people"
@@ -27,7 +27,7 @@ export default [
         img: "lobster-snapper.jpg",
         measurement: "pie",
         description: "Recommended for 1 person", 
-        price: "39.00",
+        price: 39.00,
         shipping: "Australia",
         sale: false,
         serving: "2 - 3 people"
@@ -38,7 +38,7 @@ export default [
         img: "panko-prawns.jpg",
         measurement: "pack",
         description: "Prawns covered in panko crumbs", 
-        price: "19.90",
+        price: 19.90,
         shipping: "International",
         sale: true,
         serving: "4 - 5 people"
@@ -49,7 +49,7 @@ export default [
         img: "butter-lobster.jpg",
         measurement: "pack",
         description: "A full Lobster covered in a garlic butter sauce", 
-        price: "29.90",
+        price: 29.90,
         shipping: "International",
         sale: true,
         serving: "2 - 3 people"
