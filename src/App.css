@@ -813,8 +813,8 @@ li::marker{
 }
 
 .cart--item--container{
-  height: 150px;
-  width: 500px;
+  height: 140px;
+  width: 450px;
   margin-left: 20px;
   margin-right: 20px;
   border-radius: 20px;
@@ -854,6 +854,125 @@ li::marker{
 .cart--price{
   font-family: 'Rethink Sans';
   color:#C90D12;
+  font-size: 16px;
   margin-block-start: 0px;
   margin-block-end: 5px;
+}
+
+.cart--container{
+  display: none;
+  flex-direction: column;
+  position: fixed;
+  z-index: 100;
+  background-color: white;
+  height: 100%;
+  width: 0px;
+  right: 0;
+}
+
+.cart--top{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 10px;
+  padding: 10px;
+}
+
+.cart--top > svg{
+  height: 35px;
+  right: 10px;
+  position: absolute;
+  cursor: pointer;
+}
+
+.cart--top > h1{
+  margin-block-start: 0px;
+}
+
+.cart--shipping{
+  background-color: #F5F5F5;
+  border-radius: 10px;
+  border: 1px solid rgba(149, 157, 165, 0.2);
+  padding-bottom: 20px;
+  margin-top: 20px;
+  margin: 10px;
+}
+
+.cart--shipping > h5{
+  font-weight: 100;
+  color: gray;
+  font-family: 'Rethink Sans';
+  padding-left: 10px;
+  margin-block-start: 2px;
+  margin-block-end: 5px;
+}
+
+.cart--progress-bar{
+  width: 95%;
+  margin-left: 10px;
+  background-color: rgba(149, 157, 165, 0.2);
+  height: 8px;
+  border-radius: 5px;
+  display: block;
+}
+
+.cart--progress-bar > span{
+  width: 25%;
+  background-color: #167E60;
+  height: 8px;
+  border-radius: 5px;
+  display: block;
+}
+
+.cart--totals{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  bottom: 0;
+  width: 100%;
+  position: absolute;
+  box-shadow:  rgba(149, 157, 165, 0.4) 8px 0px 24px;
+}
+
+.cart--total--text{
+  margin-left: 20px;
+  font-family: 'Rethink Sans';
+  margin-top: 10px;
+}
+
+.cart--total--text > h2{
+  margin-block-end: 2px;
+  margin-block-start: 0px;
+  font-family: 'Bricolage Grotesque';
+  color: #C90D12;
+}
+
+.cart--total--text > h3{
+  margin-block-end: 2px;
+  letter-spacing: 3px;
+  font-size: 12px;
+  color: rgba(149, 157, 165, 0.7);
+  margin-block-start: 0px;
+}
+
+.cart--total--text > h5{
+  margin-block-end: 10px;
+  margin-block-start: 0px;
+  color: gray;
+  font-weight: 200;
+}
+
+.cart--totals > button{
+  position: absolute;
+  right: 10px;
+  font-family: 'Rethink Sans';
+  background-color: black;
+  border-radius: 15px;
+  height: 35px;
+  width: 100px;
+  color: white;
+}
+
+.cart--totals > button > svg{
+  margin-left: 5px;
 }

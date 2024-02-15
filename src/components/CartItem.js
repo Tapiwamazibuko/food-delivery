@@ -7,11 +7,13 @@ export default function CartItem(props){
     function increase(){
         setPrice(prevPrice => prevPrice+props.price)
         setQuantity(prevQuantity => prevQuantity+1)
+        props.totalPrice(prev => prev+props.price)
     }
 
     function decrease(){
         setPrice(prevPrice => prevPrice >= props.price ? prevPrice-props.price : 0)
         setQuantity(prevQuantity => prevQuantity >= 1 ? prevQuantity-1 : 0)
+        props.totalPrice(prev => prev >= props.price ? prev-props.price : 0)
     }
 
     return(
@@ -21,7 +23,7 @@ export default function CartItem(props){
             </div>
             <div style={{width: "65%", paddingLeft: "20px"}}>
                 {props.sale && <div className="cart--sale--flag" style={{marginLeft: "10px"}}>save $5.00</div>}
-                <h1 className="recipe--details" style={{whiteSpace: "nowrap",overflow: "hidden", textOverflow: "ellipsis", fontSize: "28px", marginBlockStart: "5px"}}>
+                <h1 className="recipe--details" style={{whiteSpace: "nowrap",overflow: "hidden", textOverflow: "ellipsis", fontSize: "24px", marginBlockStart: "5px"}}>
                     {props.title}
                 </h1>
                 <div style={{marginLeft: "10px"}}>

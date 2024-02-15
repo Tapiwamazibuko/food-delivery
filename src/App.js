@@ -16,6 +16,7 @@ import SubscribeForm from './components/SubscribeForm';
 import Footer from './components/Footer';
 import Menu from './components/Menu';
 import seafoodMenuData from './data/seafoodMenuData';
+import Cart from './components/Cart';
 
 function App() {
   const mainSliderData = mainData.map( data => {
@@ -29,6 +30,7 @@ function App() {
 
   return (
     <div>
+      <Cart />
       <Header></Header>
       <Menu 
         id="seafoodMenu"

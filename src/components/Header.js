@@ -3,6 +3,7 @@ import menu from "../images/menu-icon.png";
 import search from "../images/search-icon.png";
 import location from "../images/location-icon.png";
 import user from "../images/user-icon.png";
+import cart from "../images/cart-icon.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 
@@ -10,6 +11,12 @@ export default function Header(){
     function openSeafoodNav() {
         document.getElementById("seafoodMenu").style.height === "450px" ? document.getElementById("seafoodMenu").style.display = "none" : document.getElementById("seafoodMenu").style.display = "grid";
         document.getElementById("seafoodMenu").style.height = document.getElementById("seafoodMenu").style.height === "450px" ? "0px" : "450px" ;
+      }
+
+    function openCart() {
+        document.getElementById("cart").style.width === "500px" ? document.getElementById("cart").style.display = "none" : document.getElementById("cart").style.display = "flex";
+        document.getElementById("cart").style.width = document.getElementById("cart").style.width === "500px" ? "0px" : "500px" ;
+        document.getElementById("cart").style.height = "100%";
       }
 
     return (
@@ -43,6 +50,7 @@ export default function Header(){
             <img src={search} className="nav--logo"></img>
             <img src={location} className="nav--logo"></img>
             <img src={user} className="nav--logo"></img>
+            <img src={cart} className="nav--logo" onClick={openCart}></img>
         </div>
     </nav>
     )
