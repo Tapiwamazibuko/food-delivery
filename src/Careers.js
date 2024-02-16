@@ -5,6 +5,9 @@ import Header from "./components/Header";
 import Menu from "./components/Menu";
 import seafoodMenuData from "./data/seafoodMenuData";
 import moreMenuData from "./data/moreMenuData";
+import SearchItem from "./components/SearchItem";
+import seafoodData from "./data/seafoodData";
+import cookingData from "./data/cookingData";
 
 export default function Careers(){
     const [menuData, setMenuData] = React.useState(seafoodMenuData)
@@ -27,6 +30,15 @@ export default function Careers(){
                 data={menuData}
             />
             <CareersPage/>
+            <SearchItem 
+                img={seafoodData[0].img}
+                title={seafoodData[0].title}
+                serving={seafoodData[0].serving}
+            />
+            <SearchItem 
+                img={cookingData[0].img}
+                title={cookingData[0].title}
+            />
         </div>
     )
 }
