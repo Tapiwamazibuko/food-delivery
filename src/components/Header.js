@@ -19,6 +19,12 @@ export default function Header(props){
         document.getElementById("cart").style.height = "100%";
       }
 
+    function openSearch() {
+        document.getElementById("search").style.height === "600px" ? document.getElementById("search").style.display = "none" : document.getElementById("search").style.display = "flex";
+        document.getElementById("search").style.height = document.getElementById("search").style.height === "600px" ? "0px" : "600px" ;
+        document.getElementById("search").style.width = "60%";
+      }
+
     return (
     <nav className="nav--container">
         <div className="nav--left">
@@ -47,7 +53,7 @@ export default function Header(props){
             </div>
         </div>
         <div className="nav--right">
-            <img src={search} className="nav--logo"></img>
+            <img src={search} className="nav--logo" onClick={openSearch}></img>
             <img src={location} className="nav--logo"></img>
             <img src={user} className="nav--logo"></img>
             <img src={cart} className="nav--logo" onClick={openCart}></img>

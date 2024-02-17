@@ -28,6 +28,11 @@ const router = createBrowserRouter([
     element: <Product />,
     errorElement: <ErrorPage />,
   },
+  {
+    path: "careers",
+    element: <Careers />,
+    errorElement: <ErrorPage />,
+  },
 
 ]);
 
