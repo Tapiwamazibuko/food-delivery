@@ -11,6 +11,7 @@ import Recipe from './Recipe';
 import reportWebVitals from './reportWebVitals';
 import ErrorPage from './components/ErrorPage';
 import Careers from './Careers';
+import Blog from './Blog';
 
 const router = createBrowserRouter([
   {
@@ -33,13 +34,18 @@ const router = createBrowserRouter([
     element: <Careers />,
     errorElement: <ErrorPage />,
   },
+  {
+    path: "blog",
+    element: <Blog />,
+    errorElement: <ErrorPage />,
+  },
 
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Careers/>
+    <RouterProvider router={router} />
   </React.StrictMode>
 );
 

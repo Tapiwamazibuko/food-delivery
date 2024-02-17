@@ -73,3 +73,73 @@
     font-size: 16px;
     margin-right: 10px;
 }
+
+.blog--content{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    background-color: #DADADA;
+    padding-top: 70px;
+}
+
+.blog--item {
+    width: 90%;
+    margin: 20px;
+    position: relative;
+}
+
+.blog--item > img{
+    height: 250px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.remove--flag{
+    color: #C90D12;
+    font-family: 'Rethink Sans';
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    background-color: rgba(255, 224, 224, 0.951);
+    font-size: 14px;
+    border: none;
+    border-radius: 10px;
+    height: 20px;
+    width: 90px;
+    position: absolute;
+    right: 5%;
+    top: 12%;
+    text-align: center;
+    cursor: pointer;
+  }
+
+.filter--items{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    width: 60%;
+    margin-top: 30px;
+    margin-left: 10px;
+}
+
+.filter--flag{
+    font-family: 'Rethink Sans';
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    background-color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 10px;
+    height: 25px;
+    width: fit-content;
+    text-align: center;
+    cursor: pointer;
+    padding-left: 5px;
+    padding-right: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 5px;
+}
+
+.filter--flag > svg{
+    height: 14px;
+    margin-left: 10px;
+}

@@ -5,9 +5,6 @@ import Header from "./components/Header";
 import Menu from "./components/Menu";
 import seafoodMenuData from "./data/seafoodMenuData";
 import moreMenuData from "./data/moreMenuData";
-import SearchItem from "./components/SearchItem";
-import seafoodData from "./data/seafoodData";
-import cookingData from "./data/cookingData";
 import Search from "./components/Search";
 import "./Careers.css";
 
