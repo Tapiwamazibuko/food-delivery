@@ -41,10 +41,12 @@
   align-items: center;
 }
 
-.nav--left > h1{
+.nav--left > a{
   padding-left: 15px;
   color: #C90D12;
   font-family: 'Noto Serif';
+  cursor: pointer;
+  text-decoration: none;
 }
 
 .nav--center > div > h3{

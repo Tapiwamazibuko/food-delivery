@@ -4,6 +4,7 @@ import search from "../images/search-icon.png";
 import location from "../images/location-icon.png";
 import user from "../images/user-icon.png";
 import cart from "../images/cart-icon.png";
+import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 
@@ -29,7 +30,9 @@ export default function Header(props){
     <nav className="nav--container">
         <div className="nav--left">
             <img src={menu} className="nav--logo"></img>
-            <h1>MANETTAS</h1>
+            <Link to={`/`}>
+                <h1>MANETTAS</h1>
+            </Link>
         </div>
         <div className="nav--center">
             <div>
