@@ -12,6 +12,8 @@ import reportWebVitals from './reportWebVitals';
 import ErrorPage from './components/ErrorPage';
 import Careers from './Careers';
 import Blog from './Blog';
+import Categories, {loader as categoriesLoader} from './Categories';
+
 
 const router = createBrowserRouter([
   {
@@ -38,6 +40,12 @@ const router = createBrowserRouter([
     path: "blog",
     element: <Blog />,
     errorElement: <ErrorPage />,
+  },
+  {
+    path: "categories/:categoryId",
+    element: <Categories />,
+    errorElement: <ErrorPage />,
+    loader: categoriesLoader,
   },
 
 ]);
