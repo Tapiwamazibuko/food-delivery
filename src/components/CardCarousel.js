@@ -5,6 +5,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import ProductCard from "./ProductCard";
 
 export default function CardCarousel(props){
+    
+
     const weeklySpecialsData = props.data.map( data => {
         return props.type === "recipe" ? <RecipeCard
                   key={data.id}
@@ -15,6 +17,7 @@ export default function CardCarousel(props){
                   price={data.price}
                   shipping={data.shipping}
                   sale={data.sale}
+                  id={data.id}
                 /> : <ProductCard
                 key={data.id}
                 title={data.title}
@@ -24,6 +27,7 @@ export default function CardCarousel(props){
                 difficulty={data.difficulty}
                 time={data.time}
                 serving={data.serving}
+                id={data.id}
               />
       })
 

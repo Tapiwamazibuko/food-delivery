@@ -17,6 +17,7 @@ export default function CategoriesPage(props){
                   price={element.price}
                   shipping={element.shipping}
                   sale={element.sale}
+                  id={element.id}
             />
         });
 

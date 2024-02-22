@@ -164,6 +164,8 @@
 .recipe--title{
   font-family: 'Bricolage Grotesque'; 
   font-size: 21px;
+  text-decoration: none;
+  color: black;
 }
 
 .recipe--text{
@@ -231,6 +233,7 @@
   top: 35%;
   text-align: center;
   display: inline-block;
+  z-index: 200;
 }
 
 .sale--flag{
@@ -1005,4 +1008,8 @@ li::marker{
   font-size: 12px;
   margin-block-start: 5px;
   margin-block-end: 5px;
+}
+
+a {
+  text-decoration: none;
 }

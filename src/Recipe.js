@@ -4,24 +4,52 @@ import Header from "./components/Header";
 import seafoodMenuData from "./data/seafoodMenuData";
 import RecipePage from "./components/RecipePage";
 import cookingData from "./data/cookingData";
+import moreMenuData from "./data/moreMenuData";
+import Cart from "./components/Cart";
+import Search from "./components/Search";
+import { useLoaderData } from 'react-router-dom';
+
+function getRecipe(query) {
+    const result = cookingData.filter((item) => { return item.id == query})
+    return result[0]
+  }
+
+export async function loader({ params }) {
+    const recipe = await getRecipe(params.recipeId);
+    return recipe;
+  }
 
 export default function Recipe(){
+    const recipe = useLoaderData();
+    const [menuData, setMenuData] = React.useState(seafoodMenuData)
+    function openMenu(menu){
+        if(menu==="seafood") {
+            setMenuData(seafoodMenuData)
+        } else if(menu==="more") {
+            setMenuData(moreMenuData)
+        }
+            
+    }
     return(
         <div>
-            <Header />
+            <Cart />
+            <Search />
+            <Header
+                onClick={openMenu}
+            />
             <Menu 
                 id="seafoodMenu"
-                data={seafoodMenuData}
+                data={menuData}
             />
             <RecipePage
-                difficulty={cookingData[0].difficulty}
-                time={cookingData[0].time}
-                serving={cookingData[0].serving}
-                prepTime={cookingData[0].prepTime}
-                ingredients={cookingData[0].ingredients}
-                overview={cookingData[0].overview}
-                essentials={cookingData[0].essentials}
-                img={cookingData[0].img}
+                difficulty={recipe.difficulty}
+                time={recipe.time}
+                serving={recipe.serving}
+                prepTime={recipe.prepTime}
+                ingredients={recipe.ingredients}
+                overview={recipe.overview}
+                essentials={recipe.essentials}
+                img={recipe.img}
              />
         </div>
     )

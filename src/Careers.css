@@ -151,3 +151,17 @@
     margin-top: 10px;
     margin-left: 10px;
 }
+
+main div:first-child {
+    transform: translateX(-150%);
+    opacity: 0;
+}
+main div:last-child {
+transform: translateX(150%);
+opacity: 0;
+}
+
+.slide-in {
+    transform: translateX(0) !important;
+    opacity: 1 !important;
+}

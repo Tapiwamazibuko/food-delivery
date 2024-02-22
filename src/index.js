@@ -6,8 +6,8 @@ import {
 } from "react-router-dom";
 import './index.css';
 import App from './App';
-import Product from './Product';
-import Recipe from './Recipe';
+import Product, {loader as productsLoader} from './Product';
+import Recipe, {loader as recipesLoader} from './Recipe';
 import reportWebVitals from './reportWebVitals';
 import ErrorPage from './components/ErrorPage';
 import Careers from './Careers';
@@ -25,11 +25,13 @@ const router = createBrowserRouter([
     path: "recipes/:recipeId",
     element: <Recipe />,
     errorElement: <ErrorPage />,
+    loader: recipesLoader,
   },
   {
     path: "products/:productId",
     element: <Product />,
     errorElement: <ErrorPage />,
+    loader: productsLoader,
   },
   {
     path: "careers",

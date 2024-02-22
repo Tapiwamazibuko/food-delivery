@@ -6,6 +6,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 export default function InfoCarousel(props){
     const infoCards = props.data.map( data => {
         return <InfoCard 
+                  key={data.id}
                   icon={data.icon}
                   title={data.title}
                   description={data.description}

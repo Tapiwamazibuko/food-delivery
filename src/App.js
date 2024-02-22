@@ -17,8 +17,39 @@ import Footer from './components/Footer';
 import Menu from './components/Menu';
 import seafoodMenuData from './data/seafoodMenuData';
 import Cart from './components/Cart';
+import { useState, useRef, useEffect } from "react";
+
 
 function App() {
+  const [isIntersecting, setIsIntersecting] = useState(false);
+
+  const ref = useRef(null);
+
+    useEffect(() => {
+      const observer = new IntersectionObserver(
+        ([entry]) => {
+          setIsIntersecting(entry.isIntersecting);
+        },
+        { rootMargin: "-300px" }
+      );
+      console.log(isIntersecting);
+      observer.observe(ref.current);
+      return () => observer.disconnect();
+    }, [isIntersecting]);
+
+    useEffect(() => {
+      console.log(isIntersecting);
+      if (isIntersecting) {
+        ref.current.querySelectorAll("div").forEach((el) => {
+          el.classList.add("slide-in");
+        });
+      } else {
+        ref.current.querySelectorAll("div").forEach((el) => {
+          el.classList.remove("slide-in");
+        });
+      }
+    }, [isIntersecting]);
+
   const mainSliderData = mainData.map( data => {
     return <MainSlider
               key={data.id}
@@ -33,51 +64,53 @@ function App() {
       <Cart />
       <Header></Header>
       <Menu 
-        id="seafoodMenu"
-        data={seafoodMenuData}
-        key={seafoodMenuData.id}
-      />
-      <Carousel> 
-      {mainSliderData}
+          id="seafoodMenu"
+          data={seafoodMenuData}
+          key={seafoodMenuData.id}
+        />
+      <Carousel showThumbs={false}> 
+        {mainSliderData}
       </Carousel> 
-      <CardCarousel 
-        icon={weeklySpecialData[0].icon}
-        firstTitle={weeklySpecialData[0].firstTitle}
-        secondTitle={weeklySpecialData[0].secondTitle}
-        description={weeklySpecialData[0].description}
-        data={seafoodData}
-        type="recipe"
-      />
-      <InfoCarousel 
-        icon={browseByCookingTimeData[0].icon}
-        firstTitle={browseByCookingTimeData[0].firstTitle}
-        secondTitle={browseByCookingTimeData[0].secondTitle}
-        description={browseByCookingTimeData[0].description}
-        data={cookingTimeData}
-      />
-      <CardCarousel 
-        icon={weeklySpecialData[1].icon}
-        firstTitle={weeklySpecialData[1].firstTitle}
-        secondTitle={weeklySpecialData[1].secondTitle}
-        description={weeklySpecialData[1].description}
-        data={seafoodData}
-        type="recipe"
-      />
-      <InfoCarousel 
-        icon={browseByCookingTimeData[1].icon}
-        firstTitle={browseByCookingTimeData[1].firstTitle}
-        secondTitle={browseByCookingTimeData[1].secondTitle}
-        description={browseByCookingTimeData[1].description}
-        data={cuisineData}
-      />
-      <CardCarousel 
-        icon={weeklySpecialData[2].icon}
-        firstTitle={weeklySpecialData[2].firstTitle}
-        secondTitle={weeklySpecialData[2].secondTitle}
-        description={weeklySpecialData[2].description}
-        data={cookingData}
-        type="product"
-      />
+      <main ref={ref} style={{backgroundColor: "#DADADA"}}>
+        <CardCarousel 
+          icon={weeklySpecialData[0].icon}
+          firstTitle={weeklySpecialData[0].firstTitle}
+          secondTitle={weeklySpecialData[0].secondTitle}
+          description={weeklySpecialData[0].description}
+          data={seafoodData}
+          type="recipe"
+        />
+        <InfoCarousel 
+            icon={browseByCookingTimeData[0].icon}
+            firstTitle={browseByCookingTimeData[0].firstTitle}
+            secondTitle={browseByCookingTimeData[0].secondTitle}
+            description={browseByCookingTimeData[0].description}
+            data={cookingTimeData}
+        />
+        <CardCarousel 
+            icon={weeklySpecialData[1].icon}
+            firstTitle={weeklySpecialData[1].firstTitle}
+            secondTitle={weeklySpecialData[1].secondTitle}
+            description={weeklySpecialData[1].description}
+            data={seafoodData}
+            type="recipe"
+          />
+        <InfoCarousel 
+            icon={browseByCookingTimeData[1].icon}
+            firstTitle={browseByCookingTimeData[1].firstTitle}
+            secondTitle={browseByCookingTimeData[1].secondTitle}
+            description={browseByCookingTimeData[1].description}
+            data={cuisineData}
+          />
+        <CardCarousel 
+            icon={weeklySpecialData[2].icon}
+            firstTitle={weeklySpecialData[2].firstTitle}
+            secondTitle={weeklySpecialData[2].secondTitle}
+            description={weeklySpecialData[2].description}
+            data={cookingData}
+            type="product"
+        />
+      </main>
       <SubscribeForm/>
       <Footer/>
     </div>
