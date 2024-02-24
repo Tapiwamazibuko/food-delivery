@@ -4,6 +4,7 @@ export default [
     {
         id: 1,
         icon: faLaptop,
-        title: "Careers"
+        title: "Careers",
+        link: "careers"
     },
 ]

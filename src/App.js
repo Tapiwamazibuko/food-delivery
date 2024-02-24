@@ -17,11 +17,23 @@ import Footer from './components/Footer';
 import Menu from './components/Menu';
 import seafoodMenuData from './data/seafoodMenuData';
 import Cart from './components/Cart';
+import Search from "./components/Search";
 import { useState, useRef, useEffect } from "react";
+import React from 'react';
+import moreMenuData from "./data/moreMenuData";
 
 
 function App() {
   const [isIntersecting, setIsIntersecting] = useState(false);
+  const [menuData, setMenuData] = React.useState(seafoodMenuData)
+  function openMenu(menu){
+    if(menu==="seafood") {
+        setMenuData(seafoodMenuData)
+    } else if(menu==="more") {
+        setMenuData(moreMenuData)
+    }
+        
+  }
 
   const ref = useRef(null);
 
@@ -62,11 +74,13 @@ function App() {
   return (
     <div>
       <Cart />
-      <Header></Header>
+      <Search />
+      <Header
+        onClick={openMenu}
+      />
       <Menu 
           id="seafoodMenu"
-          data={seafoodMenuData}
-          key={seafoodMenuData.id}
+          data={menuData}
         />
       <Carousel showThumbs={false}> 
         {mainSliderData}

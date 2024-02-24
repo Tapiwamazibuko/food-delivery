@@ -21,7 +21,6 @@ export async function loader({ params }) {
     myArray.forEach(element => {
         foodItems.push(seafoodData.filter((item) => { return item.title.includes(element)}))
     });
-    console.log(foodItems)
     return { category, foodItems };
   }
 
