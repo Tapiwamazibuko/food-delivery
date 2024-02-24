@@ -424,6 +424,7 @@
   color: white;
   position: absolute;
   font-family: "Rethink Sans";
+  cursor: pointer;
 }
 
 .footer--container{

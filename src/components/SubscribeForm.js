@@ -28,7 +28,7 @@ export default function SubscribeForm(){
                         onChange={handleChange}
                         placeholder="Enter your Email Address..."
                     ></input>
-                    <button>Subscribe</button>
+                    <button type="submit">Subscribe</button>
                 </span>
             </div>
         </div>
