@@ -577,6 +577,8 @@
 
 .product--image > img{
   width: 90%;
+  height: 700px;
+  object-fit: cover;
   border-radius: 20px;
 }
 
@@ -681,12 +683,13 @@
 
 .maximize--button{
   right: 8%;
-  bottom: 14%;
+  bottom: 8%;
   position: absolute;
   width: 40px;
   height: 40px;
   border: none;
   border-radius: 10px;
+  cursor: pointer;
 }
 
 .maximize--button > svg{
@@ -723,6 +726,7 @@
   border-radius: 20px;
   font-family: "Rethink Sans";
   font-weight: 100;
+  cursor: pointer;
 }
 
 .add--to--cart > svg{

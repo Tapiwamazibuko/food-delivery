@@ -21,8 +21,25 @@ export default function ProductPage(props){
         const {name, value, type} = event.target
         setExtra1(value)
     }
+
+    const stillLoading = async () => {
+        setTimeout(() => {  document.getElementById("cartAdded").style.display = "none" }, 2000);
+      }
+
+    function addToCart(event){
+        const {name, value, type} = event.target
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+        document.getElementById("cartAdded").style.display = "flex"
+        stillLoading()
+        
+    }
     return(
-        <div className="product--background">
+        <div>
+            <div id="cartAdded" className="added--to--cart">
+                <h1>Item successfully Added to the Cart!</h1>
+            </div>
+            <div className="product--background">
             <div className="product--image">
                 <button type="button" className="maximize--button">
                     <FontAwesomeIcon icon={faMaximize}/>
@@ -103,11 +120,13 @@ export default function ProductPage(props){
                         </div>
                     </div>
                 </div>
-                <button type="button" className="add--to--cart">
+                <button type="button" className="add--to--cart" onClick={addToCart}>
                     Add to Cart
                     <FontAwesomeIcon icon={faCartShopping}/>
                 </button>
             </div>
+            </div>
         </div>
+        
     )
 }
