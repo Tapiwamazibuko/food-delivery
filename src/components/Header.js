@@ -9,9 +9,11 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 
 export default function Header(props){
-    function openSeafoodNav() {
+    function openSeafoodNav(dropdown) {
         document.getElementById("seafoodMenu").style.height === "450px" ? document.getElementById("seafoodMenu").style.display = "none" : document.getElementById("seafoodMenu").style.display = "grid";
         document.getElementById("seafoodMenu").style.height = document.getElementById("seafoodMenu").style.height === "450px" ? "0px" : "450px" ;
+        document.getElementById(dropdown).style.color  = document.getElementById(dropdown).style.color == "rgb(201, 13, 18)" ? "#000000" : "#C90D12";
+        console.log(document.getElementById(dropdown).style.color )
       }
 
     function openCart() {
@@ -37,19 +39,23 @@ export default function Header(props){
         <div className="nav--center">
             <div>
                 <h3>Seafood</h3>
-                <FontAwesomeIcon icon={faChevronDown} onClick={() => {props.onClick("seafood"); openSeafoodNav()}}/>
+                <FontAwesomeIcon id="seafood" icon={faChevronDown} onClick={() => {props.onClick("seafood"); openSeafoodNav("seafood")}}/>
             </div>
             <div>
                 <h3>Meat</h3>
-                <FontAwesomeIcon icon={faChevronDown} />
+                <FontAwesomeIcon id="meat" icon={faChevronDown} />
             </div>
             <div>
                 <h3>Fruits & Vegtables</h3>
-                <FontAwesomeIcon icon={faChevronDown} />
+                <FontAwesomeIcon id="fruit&veg" icon={faChevronDown} />
             </div>
             <div>
                 <h3>More</h3>
-                <FontAwesomeIcon icon={faChevronDown} onClick={() => {props.onClick("more"); openSeafoodNav()}} />
+                <FontAwesomeIcon 
+                    id="more" 
+                    icon={faChevronDown} 
+                    onClick={() => {props.onClick("more"); openSeafoodNav("more")}} 
+                />
             </div>
             <div>
                 <h3>Discover</h3>

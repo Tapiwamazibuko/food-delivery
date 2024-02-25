@@ -1,8 +1,21 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPenClip, faXmark } from "@fortawesome/free-solid-svg-icons";
+import blogData from "../data/blogData";
+import BlogCard from "./BlogCard";
 
 export default function BlogPage(){
+    const blogElements = blogData.map(data => {
+        return <BlogCard
+                    key={data.id}
+                    title={data.title}
+                    description={data.description}
+                    img={data.img}
+                    authorImg={data.authorImg}
+                />
+        
+    })
+
     return(
         <div>
             <div className="main--background" style={{backgroundImage: `url(city.jpg)`}}>
@@ -48,14 +61,9 @@ export default function BlogPage(){
                         </div>
                     </div>
                 </div>
-                <div className="blog--item">
-                    <img src={require(`../images/fish.jpg`)}></img>
-                </div>
-                <div className="blog--item">
-                    <img src={require(`../images/fishnet.jpg`)}></img>
-                </div>
-                <div className="blog--item">
-                    <img src={require(`../images/market.jpg`)}></img>
+
+                <div className="carousel--cards" style={{paddingLeft: "20px"}}>
+                    {blogElements}
                 </div>
             </div>
         </div>
