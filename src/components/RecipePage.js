@@ -7,17 +7,23 @@ export default function RecipePage(props){
     const [price, setPrice] = React.useState(0);
 
     function selectAll(){
-        setAllSelected(prev => {
-            var ele=document.getElementsByName('chk');  
-                for(var i=0; i<ele.length; i++){  
-                    if(prev==true)  {
-                        ele[i].checked = false;
-                    } else {
-                        ele[i].checked = true;
-                    }
-                }
-            return !prev
-        })
+        var ele=document.getElementsByName('chk');  
+        for(var i=0; i<ele.length; i++) {  
+            if(allSelected==true)  {
+                ele[i].checked = false;
+                var itemPrice = props.ingredients[i].price
+                setPrice(prevPrice => {
+                    return (prevPrice-itemPrice) < 0 ? 0 : (prevPrice-itemPrice)
+                })
+            } else {
+                if(!ele[i].checked){
+                    ele[i].checked = true;
+                    var itemPrice = props.ingredients[i].price
+                    setPrice(prevPrice => prevPrice+itemPrice)
+                }   
+            }
+        };
+        setAllSelected(prev => !prev)
 
     }
 
@@ -26,7 +32,7 @@ export default function RecipePage(props){
         if(checked === true){
             setPrice(prevPrice => prevPrice+props.ingredients[(id-1)].price)
         }else {
-            setPrice(prevPrice => prevPrice-props.ingredients[(id-1)].price)
+            setPrice(prevPrice => prevPrice-props.ingredients[(id-1)].price < 0 ? 0 : prevPrice-props.ingredients[(id-1)].price)
         }
     }
 
@@ -77,7 +83,7 @@ export default function RecipePage(props){
                         <input
                                 type="checkbox" id="selectAll"
                                 name="selectAll"
-                                onClick={selectAll}
+                                onChange={selectAll}
                                 className="recipe--checkbox"
                         ></input>
                         <label className="checkbox--label">Select All</label>

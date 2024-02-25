@@ -766,6 +766,7 @@
   align-items: center;
   justify-content: center;
   margin-bottom: 20px;
+  cursor: pointer;
 }
 
 .add--all--to--cart > h4{
