@@ -21,6 +21,7 @@ export async function loader({ params }) {
 
 export default function Product(){
     const product = useLoaderData();
+    const [cartStyle, setCartStyle] = React.useState({})
     const [menuData, setMenuData] = React.useState(seafoodMenuData)
     function openMenu(menu){
         if(menu==="seafood") {
@@ -31,12 +32,36 @@ export default function Product(){
             
     }
 
+    function backgroundBlur(){
+        if(Object.keys(cartStyle).length === 0)
+        {
+          setCartStyle({
+            background: "rgba(0, 0, 0, 0.7)",
+            display: "block",
+            height: "100%",
+            left: "0",
+            position: "absolute",
+            top: "0",
+            width: "100%",
+            zIndex: "5"
+          })
+          console.log("show", cartStyle)
+        }else {
+          setCartStyle({})
+          console.log("hide", cartStyle)
+        }
+      }
+
     return (
         <div>
-            <Cart />
+            <Cart 
+                blur={backgroundBlur}
+            />
+            <div style={cartStyle}/>
             <Search />
             <Header
                 onClick={openMenu}
+                blur={backgroundBlur}
             />
             <Menu 
                 id="seafoodMenu"

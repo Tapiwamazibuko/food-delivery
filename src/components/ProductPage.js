@@ -76,8 +76,8 @@ export default function ProductPage(props){
                         <button className="quantity--button" onClick={decrease}>
                             <h4>-</h4>
                         </button>
-                        <div className="quantity--container">
-                            <h3>{quantity}</h3>
+                        <div className="quantity--container" style={{height: "40px"}}>
+                            <h3 style={{fontSize: "20px", marginTop: "4px"}}>{quantity}</h3>
                         </div>
                         <button className="quantity--button" onClick={increase}>
                             <h4>+</h4>

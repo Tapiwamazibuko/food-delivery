@@ -21,9 +21,9 @@ export default function CartItem(props){
             <div className="cart--image--container">
                 <img src={require(`../images/${props.img}`)}></img>
             </div>
-            <div style={{width: "65%", paddingLeft: "20px"}}>
+            <div className="cart--contents">
                 {props.sale && <div className="cart--sale--flag" style={{marginLeft: "10px"}}>save $5.00</div>}
-                <h1 className="recipe--details" style={{whiteSpace: "nowrap",overflow: "hidden", textOverflow: "ellipsis", fontSize: "24px", marginBlockStart: "5px"}}>
+                <h1 className="recipe--details" style={{whiteSpace: "nowrap",overflow: "hidden", textOverflow: "ellipsis", fontSize: "20px", marginBlockStart: "0px"}}>
                     {props.title}
                 </h1>
                 <div style={{marginLeft: "10px"}}>

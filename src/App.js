@@ -26,6 +26,7 @@ import moreMenuData from "./data/moreMenuData";
 function App() {
   const [isIntersecting, setIsIntersecting] = useState(false);
   const [menuData, setMenuData] = React.useState(seafoodMenuData)
+  const [cartStyle, setCartStyle] = React.useState({})
   function openMenu(menu){
     if(menu==="seafood") {
         setMenuData(seafoodMenuData)
@@ -33,6 +34,27 @@ function App() {
         setMenuData(moreMenuData)
     }
         
+  }
+
+  function backgroundBlur(){
+    if(Object.keys(cartStyle).length === 0)
+    {
+      setCartStyle({
+        background: "rgba(0, 0, 0, 0.7)",
+        display: "block",
+        height: "auto",
+        minHeight: "100%",
+        left: "0",
+        position: "absolute",
+        top: "0",
+        width: "100%",
+        zIndex: "5"
+      })
+      console.log("show", cartStyle)
+    }else {
+      setCartStyle({})
+      console.log("hide", cartStyle)
+    }
   }
 
   const ref = useRef(null);
@@ -44,7 +66,6 @@ function App() {
         },
         { rootMargin: "-300px" }
       );
-      console.log(isIntersecting);
       observer.observe(ref.current);
       return () => observer.disconnect();
     }, [isIntersecting]);
@@ -73,10 +94,14 @@ function App() {
 
   return (
     <div>
-      <Cart />
+      <Cart 
+        blur={backgroundBlur}
+      />
+      <div style={cartStyle}/>
       <Search />
       <Header
         onClick={openMenu}
+        blur={backgroundBlur}
       />
       <Menu 
           id="seafoodMenu"

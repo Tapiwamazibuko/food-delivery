@@ -20,6 +20,7 @@ export default function Header(props){
         document.getElementById("cart").style.width === "500px" ? document.getElementById("cart").style.display = "none" : document.getElementById("cart").style.display = "flex";
         document.getElementById("cart").style.width = document.getElementById("cart").style.width === "500px" ? "0px" : "500px" ;
         document.getElementById("cart").style.height = "100%";
+        props.blur()
       }
 
     function openSearch() {
