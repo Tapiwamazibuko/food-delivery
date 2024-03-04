@@ -386,7 +386,7 @@
   margin-block-start: 0px;
 }
 
-.form > span{
+.form > form > span{
   background-color: white;
   display: flex;
   flex-direction: row;
@@ -397,12 +397,12 @@
   position: relative;
 }
 
-.form > span > svg{
+.form > form > span > svg{
   padding-left: 20px;
   height: 20px;
 }
 
-.form > span > input{
+.form > form > span > input{
   margin-left: 20px;
   width: 400px;
   text-indent: 5px;
@@ -410,11 +410,11 @@
   font-family: "Rethink Sans";
 }
 
-.form > span > input:active{
+.form > form > span > input:active{
   border: none;
 }
 
-.form > span > button{
+.form > form > span > button{
   background-color: black;
   border: none;
   width: 100px;

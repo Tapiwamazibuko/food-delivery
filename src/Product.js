@@ -20,7 +20,7 @@ export async function loader({ params }) {
   }
 
 export default function Product(){
-    const product = useLoaderData();
+    const {product, products, categories, cookings , search} = useLoaderData();
     const [cartStyle, setCartStyle] = React.useState({})
     const [menuData, setMenuData] = React.useState(seafoodMenuData)
     function openMenu(menu){

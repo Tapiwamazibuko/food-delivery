@@ -2,7 +2,7 @@ import React from "react";
 
 export default function SearchItem(props){
     return(
-        <div className="cart--item--container">
+        <div className="cart--item--container" style={{marginBottom: "0px", height: "75px"}}>
             <div className="cart--image--container">
                 <img src={require(`../images/${props.img}`)}></img>
             </div>

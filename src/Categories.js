@@ -21,11 +21,13 @@ export async function loader({ params }) {
     myArray.forEach(element => {
         foodItems.push(seafoodData.filter((item) => { return item.title.includes(element)}))
     });
+    console.log(category)
     return { category, foodItems };
   }
 
 export default function Categories(){
-    const { category, foodItems } = useLoaderData();
+    const { category, foodItems, products, categories, cookings , search } = useLoaderData();
+    console.log(category)
     const [menuData, setMenuData] = React.useState(seafoodMenuData)
     const [cartStyle, setCartStyle] = React.useState({})
     function openMenu(menu){
