@@ -75,6 +75,7 @@ export default function Recipe(){
                 overview={recipe.overview}
                 essentials={recipe.essentials}
                 img={recipe.img}
+                title={recipe.title}
              />
         </div>
     )

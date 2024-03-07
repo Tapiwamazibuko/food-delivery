@@ -196,3 +196,8 @@ opacity: 0;
     font-weight: 400;
     font-size: 25px;
 }
+
+.recipe--header--image {
+    width: 100%;
+    object-fit: cover;
+}

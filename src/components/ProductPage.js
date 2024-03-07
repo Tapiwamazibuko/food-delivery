@@ -28,11 +28,12 @@ export default function ProductPage(props){
 
     function addToCart(event){
         const {name, value, type} = event.target
-        document.body.scrollTop = 0;
-        document.documentElement.scrollTop = 0;
-        document.getElementById("cartAdded").style.display = "flex"
-        stillLoading()
-        
+        if(quantity > 0 ) {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+            document.getElementById("cartAdded").style.display = "flex"
+            stillLoading()
+        }     
     }
     return(
         <div>

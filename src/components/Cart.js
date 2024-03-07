@@ -3,6 +3,13 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import CartItem from "./CartItem";
 import seafoodData from "../data/seafoodData";
+import { getProducts } from "./Search";
+
+export async function loader({ request }) {
+    const body = request.body
+    const products = await getProducts(body);
+    return { products};
+  }
 
 export default function Cart(props){
     const [totalPrice, setTotalPrice] = React.useState(seafoodData[1].price+seafoodData[1].price+seafoodData[1].price);
