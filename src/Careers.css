@@ -124,15 +124,15 @@
     font-family: 'Rethink Sans';
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     background-color: white;
-    font-size: 16px;
+    font-size: 12px;
     border: none;
     border-radius: 10px;
     height: 25px;
     width: fit-content;
     text-align: center;
     cursor: pointer;
-    padding-left: 5px;
-    padding-right: 5px;
+    padding-left: 9px;
+    padding-right: 9px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -140,7 +140,7 @@
 }
 
 .filter--flag > svg{
-    height: 14px;
+    height: 12px;
     margin-left: 10px;
 }
 

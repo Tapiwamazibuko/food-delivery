@@ -7,6 +7,9 @@ import RecipeCard from "./RecipeCard";
 
 
 export default function CategoriesPage(props){
+    const [filterSelected, setFilterSelected] = React.useState([false, false, false, false, false])
+    const filterNames = ["Fish", "People", "Food", "Fishing", "Butter"]
+    const [result, setResult] = React.useState(props.foodItems[0])
     const productsItems =  props.foodItems[0].map(element => {
             return <RecipeCard
                   key={element.id}
@@ -21,7 +24,24 @@ export default function CategoriesPage(props){
             />
         });
 
-        console.log(props.foodItems[0])
+
+        function toggleFilter(index) {
+            setFilterSelected( prev => {
+                return prev.map((filter, i) => {
+                    return i === index ? !filter : filter
+                })
+              })
+
+              setResult(() => {
+                let array = []
+                filterNames.forEach(element => {
+                    array.push(props.foodItems[0].filter((item) => { return item.title.includes(element)}))
+                })
+                return array
+            })
+        }
+
+        console.log(result)
     return (
         <div>
             <div className="main--background" style={{backgroundImage: `url(${props.img})`}}>
@@ -45,25 +65,30 @@ export default function CategoriesPage(props){
                         <div className="remove--flag">Remove All</div>
                     </div>
                     <div className="categories--filter">
-                        <div className="filter--flag">
-                            Fish
-                            <FontAwesomeIcon icon={faXmark}/>
+                        <div className="filter--flag" onClick={() => toggleFilter(0)} 
+                        style={filterSelected.at(0) ? {backgroundColor: "black", color: "white"} : {backgroundColor: "white"}}>
+                            {filterNames.at(0)}
+                            { filterSelected.at(0) && <FontAwesomeIcon icon={faXmark}/>}  
                         </div>
-                        <div className="filter--flag">
-                            People
-                            <FontAwesomeIcon icon={faXmark}/>
+                        <div className="filter--flag" onClick={() => toggleFilter(1)}
+                        style={filterSelected.at(1) ? {backgroundColor: "black", color: "white"} : {backgroundColor: "white"}}>
+                            {filterNames.at(1)}
+                            { filterSelected.at(1) && <FontAwesomeIcon icon={faXmark}/>}
                         </div>
-                        <div className="filter--flag">
-                            Food
-                            <FontAwesomeIcon icon={faXmark}/>
+                        <div className="filter--flag" onClick={() => toggleFilter(2)}
+                        style={filterSelected.at(2) ? {backgroundColor: "black", color: "white"} : {backgroundColor: "white"}}>
+                            {filterNames.at(2)}
+                            { filterSelected.at(2) && <FontAwesomeIcon icon={faXmark}/>}
                         </div>
-                        <div className="filter--flag">
-                            Fishing
-                            <FontAwesomeIcon icon={faXmark}/>
+                        <div className="filter--flag" onClick={() => toggleFilter(3)}
+                        style={filterSelected.at(3) ? {backgroundColor: "black", color: "white"} : {backgroundColor: "white"}}>
+                            {filterNames.at(3)}
+                            { filterSelected.at(3) && <FontAwesomeIcon icon={faXmark}/>}
                         </div>
-                        <div className="filter--flag">
-                            Sourcing
-                            <FontAwesomeIcon icon={faXmark}/>
+                        <div className="filter--flag" onClick={() => toggleFilter(4)}
+                        style={filterSelected.at(4) ? {backgroundColor: "black", color: "white"} : {backgroundColor: "white"}}>
+                            {filterNames.at(4)}
+                            { filterSelected.at(4) && <FontAwesomeIcon icon={faXmark}/>}
                         </div>
                     </div>
                 </div>
