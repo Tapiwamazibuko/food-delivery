@@ -1,4 +1,4 @@
-import { faLaptop, faPenClip } from "@fortawesome/free-solid-svg-icons";
+import { faBowlRice, faLaptop, faPenClip } from "@fortawesome/free-solid-svg-icons";
 
 export default [
     {
@@ -12,5 +12,11 @@ export default [
         icon: faPenClip,
         title: "Blog",
         link: "blog"
+    },
+    {
+        id: 3,
+        icon: faBowlRice,
+        title: "Recipes",
+        link: "recipes"
     },
 ]

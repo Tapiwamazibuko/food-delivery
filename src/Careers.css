@@ -100,7 +100,7 @@
     font-family: 'Rethink Sans';
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     background-color: rgba(255, 224, 224, 0.951);
-    font-size: 14px;
+    font-size: 12px;
     border: none;
     border-radius: 10px;
     height: 20px;
@@ -111,6 +111,15 @@
     text-align: center;
     cursor: pointer;
   }
+
+.remove--flag:active {
+    background-color: rgba(69, 15, 15, 0.951);
+}
+
+.remove--flag > p {
+    margin-block-end: 0px;
+    margin-block-start: 2px;
+}
 
 .filter--items{
     display: grid;
@@ -200,4 +209,10 @@ opacity: 0;
 .recipe--header--image {
     width: 100%;
     object-fit: cover;
+}
+
+.recipie--carousel {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-row-gap: 20px;
 }

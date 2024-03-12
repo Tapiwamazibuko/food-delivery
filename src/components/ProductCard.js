@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 export default function ProductCard(props){
     return (
-        <Link to={`/recipes/${props.id}`}>
+        <Link to={`/recipe/${props.id}`}>
             <div className="recipe--card--container">
                 <button type="button" className="logo--button">M</button>
                 {props.sale && <div className="sale--flag">10% OFF</div>}

@@ -12,6 +12,7 @@ import reportWebVitals from './reportWebVitals';
 import ErrorPage from './components/ErrorPage';
 import Careers from './Careers';
 import Blog from './Blog';
+import Recipes from './Recipes';
 import {loader as searchLoader} from './components/Search';
 import Categories, {loader as categoriesLoader} from './Categories';
 
@@ -24,7 +25,7 @@ const router = createBrowserRouter([
     loader: searchLoader,
   },
   {
-    path: "recipes/:recipeId",
+    path: "recipe/:recipeId",
     element: <Recipe />,
     errorElement: <ErrorPage />,
     loader:  async ({ params, request }) => {
@@ -75,6 +76,12 @@ const router = createBrowserRouter([
       return {category, foodItems, products, categories, cookings , search}
       
     },
+  },
+  {
+    path: "recipes",
+    element: <Recipes />,
+    errorElement: <ErrorPage />,
+    loader: searchLoader,
   },
 
 ]);
