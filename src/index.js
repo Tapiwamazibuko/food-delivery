@@ -15,6 +15,7 @@ import Blog from './Blog';
 import Recipes from './Recipes';
 import {loader as searchLoader} from './components/Search';
 import Categories, {loader as categoriesLoader} from './Categories';
+import Contact from './Contact';
 
 
 const router = createBrowserRouter([
@@ -80,6 +81,12 @@ const router = createBrowserRouter([
   {
     path: "recipes",
     element: <Recipes />,
+    errorElement: <ErrorPage />,
+    loader: searchLoader,
+  },
+  {
+    path: "contact",
+    element: <Contact />,
     errorElement: <ErrorPage />,
     loader: searchLoader,
   },
